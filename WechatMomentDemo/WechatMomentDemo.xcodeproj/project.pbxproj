@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152F559024C992A900AE9B76 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F558F24C992A900AE9B76 /* DiscoverTableViewCell.swift */; };
+		152F559424CA740C00AE9B76 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F559324CA740C00AE9B76 /* Discover.swift */; };
+		152F559624CAA4A000AE9B76 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F559524CAA4A000AE9B76 /* DiscoverTableViewController.swift */; };
+		152F559824CAAC5800AE9B76 /* DiscoverNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F559724CAAC5800AE9B76 /* DiscoverNavigationViewController.swift */; };
 		15B5206D24C6E22A0080B80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B5206C24C6E22A0080B80E /* AppDelegate.swift */; };
 		15B5206F24C6E22A0080B80E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B5206E24C6E22A0080B80E /* SceneDelegate.swift */; };
-		15B5207124C6E22A0080B80E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B5207024C6E22A0080B80E /* ViewController.swift */; };
 		15B5207424C6E22A0080B80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B5207224C6E22A0080B80E /* Main.storyboard */; };
 		15B5207624C6E22C0080B80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B5207524C6E22C0080B80E /* Assets.xcassets */; };
 		15B5207924C6E22C0080B80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15B5207724C6E22C0080B80E /* LaunchScreen.storyboard */; };
@@ -18,8 +21,11 @@
 		15B5209F24C6EE1B0080B80E /* WeChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B5209E24C6EE1B0080B80E /* WeChatViewController.swift */; };
 		15B520A124C6EE940080B80E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B520A024C6EE940080B80E /* TabBarViewController.swift */; };
 		15B520A324C6F36C0080B80E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B520A224C6F36C0080B80E /* ContactsViewController.swift */; };
-		15B520A524C6F66C0080B80E /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B520A424C6F66C0080B80E /* DiscoverViewController.swift */; };
 		15B520A724C6F70A0080B80E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B520A624C6F70A0080B80E /* ProfileViewController.swift */; };
+		15CF142B24CDD30D00679D91 /* MomentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF142A24CDD30D00679D91 /* MomentModel.swift */; };
+		15CF142D24CDE00000679D91 /* MomentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF142C24CDE00000679D91 /* MomentRequest.swift */; };
+		15CF143124CE9AF400679D91 /* MomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF143024CE9AF400679D91 /* MomentTableViewCell.swift */; };
+		15CF143324CE9B7600679D91 /* MomentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF143224CE9B7600679D91 /* MomentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152F558F24C992A900AE9B76 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		152F559324CA740C00AE9B76 /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
+		152F559524CAA4A000AE9B76 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		152F559724CAAC5800AE9B76 /* DiscoverNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverNavigationViewController.swift; sourceTree = "<group>"; };
 		15B5206924C6E22A0080B80E /* WechatMomentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WechatMomentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B5206C24C6E22A0080B80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15B5206E24C6E22A0080B80E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15B5207024C6E22A0080B80E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15B5207324C6E22A0080B80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15B5207524C6E22C0080B80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15B5207824C6E22C0080B80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,8 +66,11 @@
 		15B5209E24C6EE1B0080B80E /* WeChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeChatViewController.swift; sourceTree = "<group>"; };
 		15B520A024C6EE940080B80E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		15B520A224C6F36C0080B80E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		15B520A424C6F66C0080B80E /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		15B520A624C6F70A0080B80E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		15CF142A24CDD30D00679D91 /* MomentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentModel.swift; sourceTree = "<group>"; };
+		15CF142C24CDE00000679D91 /* MomentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentRequest.swift; sourceTree = "<group>"; };
+		15CF143024CE9AF400679D91 /* MomentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTableViewCell.swift; sourceTree = "<group>"; };
+		15CF143224CE9B7600679D91 /* MomentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		152F558B24C9784500AE9B76 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				152F558F24C992A900AE9B76 /* DiscoverTableViewCell.swift */,
+				152F559324CA740C00AE9B76 /* Discover.swift */,
+				152F559524CAA4A000AE9B76 /* DiscoverTableViewController.swift */,
+				152F559724CAAC5800AE9B76 /* DiscoverNavigationViewController.swift */,
+				15CF142A24CDD30D00679D91 /* MomentModel.swift */,
+				15CF142C24CDE00000679D91 /* MomentRequest.swift */,
+				15CF143024CE9AF400679D91 /* MomentTableViewCell.swift */,
+				15CF143224CE9B7600679D91 /* MomentTableViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		152F558C24C9785200AE9B76 /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				15B5209E24C6EE1B0080B80E /* WeChatViewController.swift */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		152F558D24C9785B00AE9B76 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				15B520A224C6F36C0080B80E /* ContactsViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		152F558E24C9786200AE9B76 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				15B520A624C6F70A0080B80E /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		15B5206024C6E22A0080B80E = {
 			isa = PBXGroup;
 			children = (
@@ -111,16 +162,15 @@
 			children = (
 				15B5206C24C6E22A0080B80E /* AppDelegate.swift */,
 				15B5206E24C6E22A0080B80E /* SceneDelegate.swift */,
-				15B5207024C6E22A0080B80E /* ViewController.swift */,
+				15B520A024C6EE940080B80E /* TabBarViewController.swift */,
 				15B5207224C6E22A0080B80E /* Main.storyboard */,
 				15B5207524C6E22C0080B80E /* Assets.xcassets */,
 				15B5207724C6E22C0080B80E /* LaunchScreen.storyboard */,
 				15B5207A24C6E22C0080B80E /* Info.plist */,
-				15B5209E24C6EE1B0080B80E /* WeChatViewController.swift */,
-				15B520A024C6EE940080B80E /* TabBarViewController.swift */,
-				15B520A224C6F36C0080B80E /* ContactsViewController.swift */,
-				15B520A424C6F66C0080B80E /* DiscoverViewController.swift */,
-				15B520A624C6F70A0080B80E /* ProfileViewController.swift */,
+				152F558C24C9785200AE9B76 /* Chats */,
+				152F558D24C9785B00AE9B76 /* Contacts */,
+				152F558B24C9784500AE9B76 /* Discover */,
+				152F558E24C9786200AE9B76 /* Profile */,
 			);
 			path = WechatMomentDemo;
 			sourceTree = "<group>";
@@ -275,13 +325,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				15B5209F24C6EE1B0080B80E /* WeChatViewController.swift in Sources */,
-				15B5207124C6E22A0080B80E /* ViewController.swift in Sources */,
-				15B520A524C6F66C0080B80E /* DiscoverViewController.swift in Sources */,
+				152F559024C992A900AE9B76 /* DiscoverTableViewCell.swift in Sources */,
 				15B5206D24C6E22A0080B80E /* AppDelegate.swift in Sources */,
+				15CF143124CE9AF400679D91 /* MomentTableViewCell.swift in Sources */,
 				15B520A124C6EE940080B80E /* TabBarViewController.swift in Sources */,
+				15CF143324CE9B7600679D91 /* MomentTableViewController.swift in Sources */,
+				152F559624CAA4A000AE9B76 /* DiscoverTableViewController.swift in Sources */,
 				15B5206F24C6E22A0080B80E /* SceneDelegate.swift in Sources */,
+				15CF142B24CDD30D00679D91 /* MomentModel.swift in Sources */,
+				152F559424CA740C00AE9B76 /* Discover.swift in Sources */,
 				15B520A724C6F70A0080B80E /* ProfileViewController.swift in Sources */,
 				15B520A324C6F36C0080B80E /* ContactsViewController.swift in Sources */,
+				152F559824CAAC5800AE9B76 /* DiscoverNavigationViewController.swift in Sources */,
+				15CF142D24CDE00000679D91 /* MomentRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
