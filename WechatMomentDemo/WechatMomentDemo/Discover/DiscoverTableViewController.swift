@@ -40,7 +40,7 @@ class DiscoverTableViewController: UITableViewController {
   private func viewController(for component: String) -> UIViewController? {
     switch component {
     case "Moments":
-      return MomentTableViewController()
+      return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MomentTableViewController") as! MomentTableViewController
     case "Channels":
       return UIViewController()
     case "Scan":

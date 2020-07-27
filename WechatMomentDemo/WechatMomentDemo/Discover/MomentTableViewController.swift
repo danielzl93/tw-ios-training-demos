@@ -12,7 +12,7 @@ class MomentTableViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.tableView.register(MomentTableViewCell.self, forCellReuseIdentifier: "MomentTableViewCell")
+//    self.tableView.register(MomentTableViewCell.self, forCellReuseIdentifier: "MomentTableViewCell")
   }
   
   // MARK: - Table view data source
@@ -31,8 +31,8 @@ class MomentTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "MomentTableViewCell", for: indexPath) as? MomentTableViewCell else { return UITableViewCell()
     }
-    print(cell)
-    cell.sender.text = "as"
+    
+    // TODO: load in data from request
     return cell
   }
   

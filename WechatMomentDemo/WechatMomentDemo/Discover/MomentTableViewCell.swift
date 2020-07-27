@@ -12,8 +12,8 @@ class MomentTableViewCell: UITableViewCell {
   @IBOutlet weak var sender: UILabel!
   @IBOutlet weak var content: UILabel!
   
-  func config(moment: Moment) {
-    self.sender.text = moment.sender?.username
-    self.content.text = moment.content
-  }
+//  func config(moment: Moment) {
+//    self.sender.text = moment.sender?.username
+//    self.content.text = moment.content
+//  }
 }
