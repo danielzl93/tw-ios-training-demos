@@ -33,6 +33,11 @@ class TableOfContentsSpec: QuickSpec {
         let expectSpell = "negative Number!"
         expect(expectSpell).to(equal(NumberNameSpeller.numberName(of: -1)))
       }
+      
+      it("should print out for 100") {
+        let expectSpell = "one hundred "
+        expect(expectSpell).to(equal(NumberNameSpeller.numberName(of: 100)))
+      }
     }
   }
 }

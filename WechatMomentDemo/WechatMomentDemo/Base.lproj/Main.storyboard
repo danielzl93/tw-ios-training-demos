@@ -32,21 +32,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MomentTableViewCell" rowHeight="69" id="KU3-08-zW2" customClass="MomentTableViewCell" customModule="WechatMomentDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="69"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MomentTableViewCell" rowHeight="99" id="KU3-08-zW2" customClass="MomentTableViewCell" customModule="WechatMomentDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KU3-08-zW2" id="nir-9P-a1g">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cX4-V3-dmM">
-                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <rect key="frame" x="20" y="10" width="374" height="53.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-Ck-NHO">
-                                            <rect key="frame" x="20" y="37" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGA-Ck-NHO">
+                                            <rect key="frame" x="20" y="68.5" width="374" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -54,11 +54,12 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="wGA-Ck-NHO" firstAttribute="top" secondItem="cX4-V3-dmM" secondAttribute="bottom" constant="5" id="AwU-tK-XLg"/>
+                                        <constraint firstAttribute="trailing" secondItem="cX4-V3-dmM" secondAttribute="trailing" constant="20" id="BHj-Ka-JSf"/>
                                         <constraint firstItem="wGA-Ck-NHO" firstAttribute="leading" secondItem="nir-9P-a1g" secondAttribute="leading" constant="20" id="NDQ-AL-Yry"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wGA-Ck-NHO" secondAttribute="trailing" constant="20" symbolic="YES" id="Nd0-ZV-y6R"/>
                                         <constraint firstItem="cX4-V3-dmM" firstAttribute="leading" secondItem="nir-9P-a1g" secondAttribute="leading" constant="20" id="T8z-Bm-ueZ"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cX4-V3-dmM" secondAttribute="trailing" constant="20" symbolic="YES" id="fIB-7C-qMH"/>
-                                        <constraint firstItem="cX4-V3-dmM" firstAttribute="top" secondItem="nir-9P-a1g" secondAttribute="top" constant="11" id="vfX-ft-a53"/>
+                                        <constraint firstAttribute="trailing" secondItem="wGA-Ck-NHO" secondAttribute="trailing" constant="20" id="TMT-6W-MXp"/>
+                                        <constraint firstAttribute="bottom" secondItem="wGA-Ck-NHO" secondAttribute="bottom" constant="10" id="bBw-9O-6wr"/>
+                                        <constraint firstItem="cX4-V3-dmM" firstAttribute="top" secondItem="nir-9P-a1g" secondAttribute="top" constant="10" id="vfX-ft-a53"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

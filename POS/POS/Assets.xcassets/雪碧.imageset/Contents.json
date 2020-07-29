@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "51774339-chisinau-moldova-november14-2015-bottle-of-sprite-drink-isolated-on-white-sprite-is-lemon-like-flavo.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

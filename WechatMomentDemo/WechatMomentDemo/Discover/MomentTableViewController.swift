@@ -9,30 +9,41 @@
 import UIKit
 
 class MomentTableViewController: UITableViewController {
+  let momentRequest = MomentRequest()
+  var momentResult: [Moment] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    self.tableView.register(MomentTableViewCell.self, forCellReuseIdentifier: "MomentTableViewCell")
+    tableView.estimatedRowHeight = 600
+    tableView.rowHeight = UITableView.automaticDimension
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(false)
+    momentRequest.getSearchResults { [weak self] (results, error) in
+      if let result = results {
+        self?.momentResult = result
+        self?.tableView.reloadData()
+      }
+    }
+    
   }
   
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
     return 1
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return 1
+    return momentResult.count
   }
   
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "MomentTableViewCell", for: indexPath) as? MomentTableViewCell else { return UITableViewCell()
     }
-    
-    // TODO: load in data from request
+    cell.config(moment: momentResult[indexPath.row])
     return cell
   }
   
