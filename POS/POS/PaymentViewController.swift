@@ -22,7 +22,6 @@ class PaymentViewController: UIViewController{
       totalPrice.text = "\(totalCost) 元"
       moneySaved.text = "\(saved) 元"
     }
-    // Do any additional setup after loading the view.
   }
   
   func getTotalPrice(completion: (Double, Double) -> Void) {

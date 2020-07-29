@@ -22,11 +22,11 @@ class CartTableViewCell: UITableViewCell {
     self.productName.text = self.product.name
     if let count = self.product.count {
       self.purchasedCount.text = "数量：\(count) \(self.product.unit)"
-      self.promoteCount.text = "x \(count / 2)"
+      guard let isPromoted = self.product.isPromoted else { return }
+      self.promoteCount.text = isPromoted ? "x \(count / 2)" : "0"
       self.productCost.text = String(format: "%.1f 元", self.product.price * Double(count))
     }
     self.productImage.image = UIImage(named: self.product.name)?.resizeImage(targetSize: CGSize(width: 65, height: 65))
-    
   }
   
   

@@ -13,7 +13,7 @@ class ProductViewController: UIViewController{
   @IBOutlet weak var tableView: UITableView!
   let queryService = QueryService()
   var productsResult: [Product] = []
-  var tableViewCell: [ProductTableViewCell] = []
+  var tableViewCell = [IndexPath: ProductTableViewCell]()
   var productCart: [Product] = []
   
 
@@ -30,6 +30,8 @@ class ProductViewController: UIViewController{
     queryService.getProductInfo { [weak self] (results, error) in
       if let result = results {
         self?.productsResult = result
+        guard let count = self?.productsResult.count else { return }
+        self?.tableViewCell.reserveCapacity(count)
         self?.tableView.reloadData()
       }
     }
@@ -38,15 +40,17 @@ class ProductViewController: UIViewController{
   }
   
   @objc func deselectAll() {
-    self.tableViewCell.forEach { (cell) in
+    self.tableViewCell.forEach { (key, cell) in
       cell.count.text = String(0)
     }
     productCart.removeAll()
     self.tableView.reloadData()
   }
   
+  
   @objc func goToCart() {
-    self.tableViewCell.forEach { (cell) in
+    self.productCart.removeAll()
+    self.tableViewCell.forEach { (key, cell) in
       if let product = cell.product {
         guard let count = product.count else { return }
         if count > 0 {
@@ -54,7 +58,9 @@ class ProductViewController: UIViewController{
         }
       }
     }
-    performSegue(withIdentifier: "goToCart", sender: self.productCart)
+    performSegue(withIdentifier: "goToCart", sender: self.productCart.sorted(by: { (previous, current) -> Bool in
+      previous.barcode < current.barcode
+    }))
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,7 +88,7 @@ extension ProductViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = self.tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else { return UITableViewCell()}
     cell.config(newProduct: productsResult[indexPath.row])
-    tableViewCell.append(cell)
+    tableViewCell[indexPath] = cell
     return cell
   }
   

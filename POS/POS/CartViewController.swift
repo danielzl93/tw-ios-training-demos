@@ -32,6 +32,7 @@ class CartViewController: UIViewController {
   }
   
   func getTotalPrice() -> Double {
+    
     product.forEach { (product) in
       if let count = product.count {
         totalPrice += product.price * Double(count)
