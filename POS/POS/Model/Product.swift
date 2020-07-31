@@ -13,6 +13,4 @@ struct Product: Codable{
   let name: String
   let unit: String
   let price: Double
-  var isPromoted: Bool?
-  var count: Int?
 }

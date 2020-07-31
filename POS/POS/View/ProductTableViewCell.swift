@@ -9,8 +9,6 @@
 import UIKit
 
 class ProductTableViewCell: UITableViewCell {
-  var product: Product!
-  
   @IBOutlet weak var productImage: UIImageView!
   @IBOutlet weak var productName: UILabel!
   @IBOutlet weak var productUnit: UILabel!
@@ -19,40 +17,26 @@ class ProductTableViewCell: UITableViewCell {
   @IBOutlet weak var minusButton: UIButton!
   @IBOutlet weak var plusButton: UIButton!
   
+  var addProductHandler: (() -> Void)?
+  var minusProductHandler: (() -> Void)?
   
-  func config(newProduct: Product) {
-    self.product = newProduct
-    self.productName.text = product.name
-    self.productUnit.text = product.unit
-    self.productImage.image = UIImage(named: product.name)?.resizeImage(targetSize: CGSize(width: 65, height: 65))
-    self.price.text = String(format: "%.1f 元", product.price)
-    if let count = product.count {
-      self.count.text = String(count)
-    }
-    minusButton.addTarget(self, action: #selector(minusClick), for: .touchUpInside)
-    plusButton.addTarget(self, action: #selector(plusClick), for: .touchUpInside)
+  func config(productViewModel: ProductViewModel, addProductHandler: (() -> Void)?, minusProductHandler: (() -> Void)?) {
+    self.productName.text = productViewModel.product.name
+    self.productUnit.text = productViewModel.product.unit
+    self.productImage.image = UIImage(named: productViewModel.product.name)?.resizeImage(targetSize: CGSize(width: 65, height: 65))
+    self.price.text = String(format: "%.1f 元", productViewModel.product.price)
+    self.count.text = String(productViewModel.count)
+    self.addProductHandler = addProductHandler
+    self.minusProductHandler = minusProductHandler
   }
   
-  @objc func minusClick() {
-    guard let countString = self.count.text else { return }
-    if let count = Int(countString) {
-      if count >= 1 {
-        self.count.text = String(count - 1)
-        self.product.count! -= 1
-      }
-    }
+  @IBAction func addProductButton(_ sender: Any) {
+    self.addProductHandler?()
   }
   
-  @objc func plusClick() {
-    guard let countString = self.count.text else { return }
-    if let count = Int(countString) {
-      if count >= 0 {
-        self.count.text = String(count + 1)
-        self.product.count! += 1
-      }
-    }
+  @IBAction func minusProductButton(_ sender: Any) {
+    self.minusProductHandler?()
   }
-  
 }
 
 extension UIImage {
